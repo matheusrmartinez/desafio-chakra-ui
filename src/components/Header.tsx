@@ -1,24 +1,32 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
-import React from "react";
+import { Flex, HStack, Icon, IconButton, Image } from '@chakra-ui/react';
+import React, { useCallback } from 'react';
+import { RiArrowLeftSLine } from 'react-icons/ri';
+import {useRouter} from "next/router";
+import Link from 'next/link';
 
-export function Header() {
+interface HeaderProps {
+  isHomePage?: boolean;
+}
+
+export function Header({ isHomePage = false }: HeaderProps) {
   return (
-    <Flex
-      w="100%"
-      h={100}
-      maxWidth={1440}
-      display="flex"
-      justifyContent="center">
-        <Box
-          boxSize="sm"
-          w="100%"
-          h={100}
-          display="flex"
-          maxWidth={1440}
-          alignItems="center"
-          justifyContent="center">
+    <Flex w="100%" h="100px" alignItems="center">
+      {!isHomePage && (
+        <HStack ml="140px">
+          <Link passHref href="/">
+          <IconButton
+            aria-label="Open navigation"
+            variant="unstyled"
+            color="#rgb(0,0,0,0.25)"
+            zIndex="1"
+            icon={<Icon fontSize="30" as={RiArrowLeftSLine}/>}
+          />
+          </Link>
+        </HStack>
+      )}
+      <HStack position="absolute" w="100%" justify="center">
         <Image src="/images/logo.svg" alt="logo" />
-        </Box>
+      </HStack>
     </Flex>
   );
 }

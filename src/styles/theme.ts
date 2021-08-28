@@ -5,13 +5,18 @@ export const theme = extendTheme({
     gray: {
       "500": "#47585B",
     },
+    darkGray: {
+      "500": "#999999"
+    },
     white: {
-      "standard": "#ffff"
-    }
+      "standard": "#ffff",
+      "700": "#F5F8FA",
+    },
+    yellow: "#FFBA08"
   },
   fonts: {
-    heading: 'Popins',
-    body: 'Popins'
+    heading: 'Poppins',
+    body: 'Poppins'
   },
   styles: {
     global: {
