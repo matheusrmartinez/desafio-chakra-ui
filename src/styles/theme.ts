@@ -6,7 +6,8 @@ export const theme = extendTheme({
       "500": "#47585B",
     },
     darkGray: {
-      "500": "#999999"
+      "500": "#999999",
+      "400": "#DADADA"
     },
     white: {
       "standard": "#ffff",
