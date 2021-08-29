@@ -1,17 +1,17 @@
 import { Flex, HStack, Icon, IconButton, Image } from '@chakra-ui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useCallback } from 'react';
 import { RiArrowLeftSLine } from 'react-icons/ri';
-import {useRouter} from "next/router";
-import Link from 'next/link';
 
-interface HeaderProps {
-  isHomePage?: boolean;
-}
 
-export function Header({ isHomePage = false }: HeaderProps) {
+export function Header() {
+  const asPath = useRouter()
+  const notHomePage = asPath !== '/';
+
   return (
     <Flex w="100%" h="100px" alignItems="center">
-      {!isHomePage && (
+      {notHomePage && (
         <HStack ml="140px">
           <Link passHref href="/">
           <IconButton

@@ -18,7 +18,7 @@ import { RiInformationLine } from "react-icons/ri";
 export default function Continent() {
   return (
     <Box>
-      <Header isHomePage={false} />
+      <Header/>
       <Box height="500px">
         <Text
           fontSize={48}
