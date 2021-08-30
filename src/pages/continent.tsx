@@ -9,6 +9,7 @@ import {
   Icon,
   Heading,
   Grid,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { Header } from "../components/Header";
@@ -16,12 +17,17 @@ import { Tooltip } from "@chakra-ui/react";
 import { RiInformationLine } from "react-icons/ri";
 
 export default function Continent() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true
+  })
+
   return (
     <Box>
       <Header/>
-      <Box height="500px">
+      <Box height={["150px", "500px"]}>
         <Text
-          fontSize={48}
+          fontSize={["28px", "48px"]}
           fontWeight="semibold"
           mt={380}
           pl="140px"
@@ -30,12 +36,13 @@ export default function Continent() {
         >
           Europa
         </Text>
-        <Image src="/images/europe_high.png" alt="europe" boxSize="100%" />
+        {isWideVersion ? <Image src="/images/europe_high.png" alt="europe" boxSize="100%" />
+        : <Image src="/images/europe_small.svg" w="100%" alt="europe"/>}
       </Box>
-      <Stack pl="140px" pt="80px" w="90%">
-        <HStack>
-          <Stack width="600px" height="211px" textAlign="justify">
-            <Text fontSize="24px" color="gray.500">
+      <Stack pl={["16px", "140px"]} pt={["24px", "40px", "80px"]} w="100%" backgroundColor="blue">
+        <Stack flexDirection={["column", "row"]}>
+          <Stack width={["343px", "600px"]} height={["146px", "211px"]} textAlign="justify">
+            <Text fontSize={["14px", "24px"]} color="gray.500">
               A Europa é, por convenção, um dos seis continentes do mundo.
               Compreendendo a península ocidental da Eurásia, a Europa
               geralmente divide-se da Ásia a leste pela divisória de águas dos
@@ -44,7 +51,7 @@ export default function Continent() {
             </Text>
           </Stack>
           <Box ml="6">
-            <HStack ml="20" w="490px" justify="space-between">
+            <HStack ml={["16px", "20px"]} w={["343px", "490px"]} justify="space-between" backgroundColor="red">
               <VStack align="center" lineHeight="40px" justify="center" ml="6">
                 <Text
                   color="yellow"
@@ -100,12 +107,12 @@ export default function Continent() {
               </VStack>
             </HStack>
           </Box>
-        </HStack>
-        <Box pt="80px" height="700px" width="97%">
+        </Stack>
+        <Box pt={["200px", "80px"]} height="700px" width="97%">
           <Heading fontWeight="bold">Cidades +100</Heading>
           <Grid
             pt="10"
-            templateColumns="repeat(4, 1fr)"
+            templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(4, 1fr)"]}
             templateRows="repeat(2, 1fr)"
             gap={5}
           >

@@ -9,7 +9,7 @@ export default function Menus() {
       w="100%"
       justify="space-between"
       align="center"
-      mt={["10", "32"]}
+      mt={["5", "32"]}
       mx="auto"
       maxW="1160px"
       flexWrap="wrap"

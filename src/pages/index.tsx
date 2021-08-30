@@ -19,7 +19,7 @@ export default function Home({ continents }) {
         <Divider />
         <Text
           mt={["8", "10"]}
-          mb={["0", "10"]}
+          mb={["5", "10"]}
           fontSize={["24px", "36px"]}
           fontWeight="500"
           color="gray.500"

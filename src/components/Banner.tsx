@@ -5,6 +5,7 @@ export default function Banner() {
   const isWideVersion = useBreakpointValue({
     lg: true,
     sm: false,
+    md: false
   });
 
   return (

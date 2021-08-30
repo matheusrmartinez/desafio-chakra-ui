@@ -28,8 +28,6 @@ export default function Slider({ continents }: SliderProps) {
     lg: true,
   });
 
-  console.log(continents[0].smallImage, 'smallImage');
-
   return (
     <Box w={["100%", "80%"]}>
       <Swiper
@@ -48,6 +46,7 @@ export default function Slider({ continents }: SliderProps) {
                 w="100%"
                 h="100%"
                 position="absolute"
+                mt="5"
               >
                 <Link passHref href="/continent">
                   <Box as="a">
@@ -61,6 +60,7 @@ export default function Slider({ continents }: SliderProps) {
                     <Text
                       color="white.700"
                       fontWeight="700"
+                      pt="5"
                       fontSize={["14px", "24px"]}
                     >
                       {continent.summary}
