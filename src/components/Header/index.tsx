@@ -11,7 +11,7 @@ export function Header() {
   return (
     <Flex w="100%" h={["50px", "100px"]} alignItems="center">
       {notHomePage && (
-        <HStack ml="140px">
+        <HStack ml={["20px", "140px"]}>
           <Link passHref href="/">
             <IconButton
               aria-label="Open navigation"
