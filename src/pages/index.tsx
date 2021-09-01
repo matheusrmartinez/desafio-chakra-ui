@@ -42,7 +42,9 @@ export const getStaticProps: GetStaticProps = () => {
       title: "Europa",
       summary: "O continente mais antigo",
       image: "europa.svg",
-      smallImage: "small_europe.svg"
+      smallImage: "small_europe.svg",
+      continentDescription: "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste"
+      
     },
     {
       slug: "americaSul",

@@ -4,8 +4,7 @@ import { Box, Flex, Image, Text, useBreakpointValue } from "@chakra-ui/react";
 export default function Banner() {
   const isWideVersion = useBreakpointValue({
     lg: true,
-    sm: false,
-    md: false
+    base: false
   });
 
   return (
